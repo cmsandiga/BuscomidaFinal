@@ -79,7 +79,7 @@ public class RestauranteDAOImplTest {
 		sucursalTemp.setDireccion("Av Cirvcunvalacion 6720");		
 		sucursalTemp.setEstado("1");
 		sucursalTemp.getDistrito().setIdDistrito(1);
-		sucursal.add(sucursalTemp);
+		sucursal.add(null);
 		
 		
 		
@@ -110,6 +110,7 @@ public class RestauranteDAOImplTest {
 		} catch (Exception e) {
 			em.getTransaction().rollback();
 			e.printStackTrace();
+			
 		}finally{
 			em.close();
 		}
