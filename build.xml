@@ -12,6 +12,9 @@
 			</fileset>
 		</delete>
 		<mkdir dir="${build}"/>
+		<mkdir dir="${lib}"/>
+		<mkdir dir="${src}"/>
+		<mkdir dir="${dirs.base}/target"/>
 		<mkdir dir="${war.dir}/WEB-INF"/>
 		<mkdir dir="${war.dir}/WEB-INF/classes"/>
 		<mkdir dir="${classdir}"/>
