@@ -43,9 +43,12 @@
 		<copy todir="${war.dir}">
 			<fileset dir="${web}" includes="**/*.*"/>
 		</copy>
-		
+		<mkdir dir="${war.dir}/WEB-INF/classes/META-INF"/>
+		<copy file="${src}/META-INF/persistence.xml" todir="${war.dir}/WEB-INF/classes/META-INF" failonerror="false" />
+		<copy file="${src}/edu/cibertec/buscomida/util/resources/MisRecursos.properties" todir="${war.dir}/WEB-INF/classes//edu/cibertec/buscomida/util/resources" failonerror="false" />
+
 		<jar destfile="${war.dir}/${war.file}" basedir="${war.dir}" />
-		
+	
 		<!-- Copy wat to tomcat webapps dir-->
 		<copy todir="${tomcat.webapp.dir}" file="${war.dir}/${war.file}"/>
 	</target>
