@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!-- Build file for our first application -->
 
-<project name="Ant test project" default="build" basedir=".">
+<project name="Ant test project" default="all" basedir=".">
 	
 	<property file="build.properties" />
 	
